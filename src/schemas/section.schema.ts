@@ -9,17 +9,17 @@ export type SectionDocument = Section & Document;
 export class Section {
   @Prop({
     type: MongooseSchema.Types.ObjectId,
-    ref: 'Template',
+    ref: 'SectionTemplate',
     autopopulate: false,
     required: false,
   })
   template?: SectionTemplate;
 
-  @Prop({ type: String, required: true })
-  text: string;
+  // @Prop({ type: String, required: true })
+  // text: string;
 
-  @Prop({ type: Date, required: true })
-  date: Date;
+  // @Prop({ type: Date, required: true })
+  // date: Date;
 
   @Prop({ type: () => [SectionSchema], required: false })
   subSections?: Section[];
