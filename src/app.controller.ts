@@ -10,9 +10,9 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  // curl command to test this endpoint: curl -X POST http://localhost:3000/createTemplate
-  @Post('createTemplate')
-  createTemplate(): string {
-    return this.appService.createTemplate();
+  // curl command to test this endpoint: curl -X POST http://localhost:3000/createSectionTemplate
+  @Post('createSectionTemplate')
+  createSectionTemplate(): string {
+    return this.appService.createSectionTemplate();
   }
 }
